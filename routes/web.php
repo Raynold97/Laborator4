@@ -17,5 +17,17 @@ Route::resource('/products','ProductController');
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/products', function () {
+    return view('viewproducts');
+});
+Route::get('/products/create', function () {
+    return view('createproduct');
+});
+Route::get('/products/update', function () {
+    return view('updateproduct');
+});
+Route::get('/products/delete', function () {
+    return view('deleteproduct');
+});
 
 

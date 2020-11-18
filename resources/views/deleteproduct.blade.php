@@ -1,16 +1,5 @@
-<!doctype html>
-    <html lang="{{ app()->getLocale() }}">
-
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <title>View Products | Product Store</title>
-        <i-- Styles etc. -->
-    </head>
-
-    <body>
+@extends('layouts.app')
+@section('content')
         <div class="flex-center positian-ref full-height">
             <div class="content">
                 <h1>Sterge produs</h1>
@@ -34,6 +23,4 @@
                 </table>
             </div>
         </div>
-    </body>
-
-    </html>
+@endsection
