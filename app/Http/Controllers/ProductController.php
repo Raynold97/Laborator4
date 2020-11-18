@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class ProductController extends Controller
 {
@@ -34,16 +35,16 @@ return view('viewproducts', ['allProducts' => $products]);
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-
-        $request->validate([
-            'name' => 'required',
-            'description'=>'required',
-            'count' => 'required',
-            'price' => 'required'
-        ]);
-        Product::create($request->all());
-        return redirect()->back()->with('success','Creat cu succes.');
+    { 
+        $product=new Product();
+            $product->name = $request->name;
+            $product->description=$request->description;
+            $product->count = $request->count;
+            $product->price = $request->price;
+            $product->save();
+    
+        
+        return redirect('products/create')>with('success','Creat cu succes.');
     }
 
     /**
