@@ -44,7 +44,7 @@ return view('viewproducts', ['allProducts' => $products]);
             $product->save();
     
         
-        return redirect('products/create')>with('success','Creat cu succes.');
+        return redirect('products/create')->with('success','Creat cu succes.');
     }
 
     /**
