@@ -36,13 +36,13 @@ return view('viewproducts', ['allProducts' => $products]);
      */
     public function store(Request $request)
     { 
-            $product=new Product();
-            $product->name = $request->name;
-            $product->description=$request->description;
-            $product->count = $request->count;
-            $product->price = $request->price;
-            $product->save();
-    
+
+        $this->validate($request,[
+            'name' => 'required',
+            'description' => 'required',
+            'count' => 'required',
+            'price' => 'required'
+        ]);    
         
         return redirect('products/create');
     }
