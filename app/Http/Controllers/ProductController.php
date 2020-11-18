@@ -36,7 +36,7 @@ return view('viewproducts', ['allProducts' => $products]);
      */
     public function store(Request $request)
     { 
-        $product=new Product();
+            $product=new Product();
             $product->name = $request->name;
             $product->description=$request->description;
             $product->count = $request->count;
@@ -44,7 +44,7 @@ return view('viewproducts', ['allProducts' => $products]);
             $product->save();
     
         
-        return redirect('products/create')->with('success','Creat cu succes.');
+        return redirect('products/create');
     }
 
     /**
