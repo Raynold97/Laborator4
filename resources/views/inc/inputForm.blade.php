@@ -1,6 +1,6 @@
 @section('inputForm')
 <div class="input-form">
-    <form action="/">
+    <form action="store">
         <h2 class="text-center">Adaugă produs</h2>
         <div class="form-group">
             <label for="exampleInputNume">Nume</label>

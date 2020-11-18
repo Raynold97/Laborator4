@@ -29,5 +29,6 @@ Route::get('/products/update', function () {
 Route::get('/products/delete', function () {
     return view('deleteproduct');
 });
+Route::post('/products/create',[ProductController::class,'store']);
 
 
