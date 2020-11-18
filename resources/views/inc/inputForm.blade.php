@@ -1,7 +1,7 @@
 @section('inputForm')
 <div class="input-form">
     <form action="/">
-        <h2 class="text-center">Adauga produs</h2>
+        <h2 class="text-center">Adaugă produs</h2>
         <div class="form-group">
             <label for="exampleInputNume">Nume</label>
             <input type="name" class="form-control" id="exampleInputNume" aria-describedby="numeHelp "
