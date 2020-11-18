@@ -18,12 +18,12 @@
                 placeholder="Introduceți cantitatea" required>
         </div>
         <div class="form-group">
-            <label for="exampleInputPret">Pret</label>
+            <label for="exampleInputPret">Preț</label>
             <input type="number" class="form-control" id="exampleInputPret" aria-describedby="pretHelp"
                 placeholder="Introduceți pretul" required>
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block">Adauga</button>
+            <button type="submit" class="btn btn-primary btn-block">Adaugă</button>
         </div>
     </form>
 </div>
