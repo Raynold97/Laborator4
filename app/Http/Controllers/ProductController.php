@@ -14,7 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = \App\Models\Product::all();
+        $products = Product::all();
         return view('viewproducts', ['allProducts' => $products]);
     }
 
@@ -42,7 +42,7 @@ class ProductController extends Controller
             'count' => 'required'
         ]);
 
-            \App\Models\Product::create([
+            Product::create([
               'name' => $request->get('name'),
               'description' => $request->get('description'),
               'price' => $request->get('price'),
@@ -50,6 +50,7 @@ class ProductController extends Controller
             ]);
     
             return redirect('/products');
+
         }
     
     /**
@@ -83,13 +84,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'name' => 'required',
-            'description' => 'required',
-            'count' => 'required',
-            'price' => 'required'
-        ]);
-        $project->update($request->all());
+        //
     }
 
     /**
