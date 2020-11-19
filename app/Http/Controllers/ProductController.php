@@ -45,7 +45,6 @@ class ProductController extends Controller
             return redirect('/products');
         }
     
-
     /**
      * Display the specified resource.
      *
