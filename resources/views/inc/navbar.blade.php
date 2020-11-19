@@ -3,16 +3,13 @@
     <a class=" navbar-brand" href="/">Product Store</a>
         <ul class="navbar-nav ml-5 mt-2 mt-lg-0" id="navbar-mid">
             <li class="nav-item mr-5">
-                <a class="nav-link" href="/products/create">Create Product</a>
+                <a class="nav-link" href="/products/create">Adaugă produs (Create)</a>
             </li>
             <li class="nav-item mr-5">
-                <a class="nav-link" href="/products">View Products</a>
+                <a class="nav-link" href="/products">Vezi produse (Read)</a>
             </li>
             <li class="nav-item mr-5">
-                <a class="nav-link" href="/products/update">Update Product</a>
-            </li>
-            <li class="nav-item mr-5">
-                <a class="nav-link" href="/products/delete">Delete Product</a>
+                <a class="nav-link" href="/products/update">Actualizează produse (Update/Delete)</a>
             </li>
         </ul>
 

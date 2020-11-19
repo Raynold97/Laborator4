@@ -15,7 +15,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = \App\Models\Product::all();
-return view('viewproducts', ['allProducts' => $products]);
+        return view('viewproducts', ['allProducts' => $products]);
     }
 
     /**
@@ -34,18 +34,17 @@ return view('viewproducts', ['allProducts' => $products]);
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    { 
-
-        $this->validate($request,[
-            'name' => 'required',
-            'description' => 'required',
-            'count' => 'required',
-            'price' => 'required'
-        ]);    
-        
-        return redirect('products/create');
-    }
+       public function store(Request $request) {
+            \App\Models\Product::create([
+              'name' => $request->get('name'),
+              'description' => $request->get('description'),
+              'price' => $request->get('price'),
+              'count' => $request->get('count'),
+            ]);
+    
+            return redirect('/products');
+        }
+    
 
     /**
      * Display the specified resource.

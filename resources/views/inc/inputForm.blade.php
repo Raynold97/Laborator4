@@ -1,27 +1,29 @@
 @section('inputForm')
 <div class="input-form">
-    <form action="/products/create">
+    <form method="post" action="{{ config('app.url')}}/products">
+    @csrf
         <h2 class="text-center">Adaugă produs</h2>
-        <div class="form-group">
+        <div class="form-input">
             <label for="exampleInputNume">Nume</label>
-            <input type="name" class="form-control" id="exampleInputNume" aria-describedby="numeHelp "
+            <input type="text" class="form-control" name="name" aria-describedby="numeHelp "
                 placeholder="Introduceți numele" required>
         </div>
-        <div class="form-group">
+        <div class="form-input">
             <label for="exampleInputPrenume">Descriere</label>
-            <input type="name" class="form-control" id="exampleInputDescriere" aria-describedby="descriereHelp"
+            <input type="text" class="form-control" name="description" aria-describedby="descriereHelp"
                 placeholder="Introduceți descrierea" required>
         </div>
-        <div class="form-group">
-            <label for="exampleInputCantitate">Cantitate</label>
-            <input type="number" class="form-control" id="exampleInputCantitate" aria-describedby="cantitateHelp"
-                placeholder="Introduceți cantitatea" required>
-        </div>
-        <div class="form-group">
+        <div class="form-input">
             <label for="exampleInputPret">Preț</label>
-            <input type="number" class="form-control" id="exampleInputPret" aria-describedby="pretHelp"
+            <input type="number" class="form-control" name="price" aria-describedby="pretHelp"
                 placeholder="Introduceți prețul" required>
         </div>
+        <div class="form-input">
+            <label for="exampleInputCantitate">Cantitate</label>
+            <input type="number" class="form-control" name="count" aria-describedby="cantitateHelp"
+                placeholder="Introduceți cantitatea" required>
+        </div>
+        <br>
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block">Adaugă</button>
         </div>

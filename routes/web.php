@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Controller\ProductController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,9 +26,8 @@ Route::get('/products/create', function () {
 Route::get('/products/update', function () {
     return view('updateproduct');
 });
-Route::get('/products/delete', function () {
-    return view('deleteproduct');
-});
+
+Route::get('/products',[ProductController::class,'index']);
+Route::get('/products/update',[ProductController::class,'index']);
+
 Route::post('/products/create',[ProductController::class,'store']);
-
-
