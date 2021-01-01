@@ -3,10 +3,10 @@
     <a class=" navbar-brand" href="/">Product Store</a>
         <ul class="navbar-nav ml-5 mt-2 mt-lg-0" id="navbar-mid">
             <li class="nav-item mr-5">
-                <a class="nav-link" href="/products/create">Adaugă produs (Create)</a>
+                <a class="nav-link" href="{{action('ProductController@create')}}">Adaugă produs (Create)</a>
             </li>
             <li class="nav-item mr-5">
-                <a class="nav-link" href="/products">Vezi produse (Read)</a>
+                <a class="nav-link" href="{{action('ProductController@index')}}">Vezi produse (Read)</a>
             </li>
         </ul>
 
