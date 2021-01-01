@@ -8,9 +8,6 @@
             <li class="nav-item mr-5">
                 <a class="nav-link" href="/products">Vezi produse (Read)</a>
             </li>
-            <li class="nav-item mr-5">
-                <a class="nav-link" href="/products/update">Actualizează produse (Update/Delete)</a>
-            </li>
         </ul>
 
       

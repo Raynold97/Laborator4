@@ -1,31 +1,33 @@
 @section('inputForm')
 <div class="input-form">
-    <form method="post" action="{{ config('app.url')}}/products">
+    {!!Form::open(['action'=>['ProductController@update',$product->id],'method'=>'POST'])!!}
+    <form method="post" action="{{ action('ProductController@update',$product->id)}}">
     @csrf
-        <h2 class="text-center">Adaugă produs</h2>
+        <h2 class="text-center">Editeaza produs</h2>
         <div class="form-input">
-            <label for="exampleInputNume">Nume</label>
-            <input type="text" class="form-control" name="name" aria-describedby="numeHelp "
-                placeholder="Introduceți numele" required>
+            <label for="name">Nume</label>
+            <input type="text" class="form-control" name="name" aria-describedby="numeHelp"
+                placeholder="Introduceți numele" value="{{$product->name}}" required>
         </div>
         <div class="form-input">
-            <label for="exampleInputPrenume">Descriere</label>
+            <label for="description">Descriere</label>
             <input type="text" class="form-control" name="description" aria-describedby="descriereHelp"
-                placeholder="Introduceți descrierea" required>
+                placeholder="Introduceți descrierea" value="{{$product->description}}" required>
         </div>
         <div class="form-input">
-            <label for="exampleInputPret">Preț</label>
+            <label for="price">Preț</label>
             <input type="price" class="form-control" name="price" aria-describedby="pretHelp"
-                placeholder="Introduceți prețul" required>
+                placeholder="Introduceți prețul" value="{{$product->price}}" required>
         </div>
         <div class="form-input">
-            <label for="exampleInputCantitate">Cantitate</label>
+            <label for="count">Cantitate</label>
             <input type="number" class="form-control" name="count" aria-describedby="cantitateHelp"
-                placeholder="Introduceți cantitatea" required>
+                placeholder="Introduceți cantitatea" value="{{$product->count}}" required>
         </div>
         <br>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block">Adaugă</button>
+            {{Form::hidden('_method','PUT')}}
+            <button type="submit" class="btn btn-primary btn-block">Actualizeaza</button>
         </div>
     </form>
 </div>

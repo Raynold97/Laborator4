@@ -12,21 +12,8 @@ use App\Http\Controllers\ProductController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::resource('/products',ProductController::class);
+Route::resource('products','ProductController');
 
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/products', function () {
-    return view('viewproducts');
-});
-Route::get('/products/create', function () {
-    return view('createproduct');
-});
-Route::get('/products/update', function () {
-    return view('updateproduct');
-});
-
-Route::get('/products',[ProductController::class,'index']);
-Route::get('/products/update',[ProductController::class,'index']);
-Route::post('/products/create',[ProductController::class,'store']);
