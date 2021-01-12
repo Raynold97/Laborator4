@@ -2,37 +2,36 @@
 <div class="input-form">
     <form method="post" action="{{ config('app.url')}}/products">
     @csrf
-        <h2 class="text-center">Adaugă produs</h2>
-        <div class="form-input">
+        <h2 >Adaugare produse</h2>
+        <div class="form-input" style="background: darkgray">
             <label for="exampleInputNume">Nume</label>
             <input type="text" class="form-control" name="name" aria-describedby="numeHelp "
-                placeholder="Introduceți numele" required>
+                 required>
         </div>
-        <div class="form-input">
+        <div class="form-input" style="background: darkgray">
             <label for="exampleInputPrenume">Descriere</label>
-            <input type="text" class="form-control" name="description" aria-describedby="descriereHelp"
-                placeholder="Introduceți descrierea" required>
+            <input type="text" class="form-control" name="description" aria-describedby="descriereHelp" required>
         </div>
-        <div class="form-input">
+        <div class="form-input" style="background: darkgray">
             <label for="exampleInputPret">Preț</label>
             <input type="price" class="form-control" name="price" aria-describedby="pretHelp"
-                placeholder="Introduceți prețul" required>
+           required>
         </div>
-        <div class="form-input">
+        <div class="form-input" style="background: darkgray">
             <label for="exampleInputCantitate">Cantitate</label>
             <input type="number" class="form-control" name="count" aria-describedby="cantitateHelp"
-                placeholder="Introduceți cantitatea" required>
+                required>
         </div>
         <br>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block">Adaugă</button>
+            <button type="submit" class="btn" style="background: cornflowerblue">Adaugă</button>
         </div>
     </form>
 </div>
 <style>
     .input-form {
-        width: 340px;
-        margin: 50px auto;
+        width: 1000px;
+        margin: 10px auto;
     }
 
     .input-form form {
